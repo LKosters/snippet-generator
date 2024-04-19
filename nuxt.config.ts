@@ -4,8 +4,8 @@ export default defineNuxtConfig({
 
   routeRules: {
     // prerender index route by default
-    '/': { prerender: true },
+    "/": { prerender: true },
   },
 
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ["@nuxtjs/tailwindcss"],
 });
