@@ -1,0 +1,8 @@
+# Ignore artifacts:
+.nuxt
+node_modules
+tailwind.config.js
+tsconfig.json
+README.md
+package-lock.json
+package.json
