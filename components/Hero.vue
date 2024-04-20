@@ -28,7 +28,7 @@
 </template>
 
 <script setup lang="ts">
-import { supabase } from '../utils/supabase'
+const supabase = SupabaseClient()
 
 const snippet = ref({ name: '', code: '' })
 const showSuccessMessage = ref(false)

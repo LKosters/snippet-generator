@@ -38,6 +38,10 @@
         </form>
       </dialog>
     </div>
+    <div v-else-if="error">
+      <!-- Display error message -->
+      <div>Error loading snippet. Please try again later.</div>
+    </div>
     <div v-else>
       Loading...
     </div>
@@ -45,14 +49,24 @@
 </template>
 
 <script setup lang="ts">
+import {SupabaseClient} from "~/utils/supabase";
+
 const route = useRoute()
 const snippet = ref(null)
+const error = ref(null)
+
+const supabase = SupabaseClient()
 
 async function getSnippet() {
-  let { data: snippetData, error } = await supabase
+  let { data: snippetData, error: requestError } = await supabase
       .from('snippets')
       .select('*')
       .eq('key', route.params.key)
+
+  if (requestError) {
+    error.value = requestError.message
+    return null
+  }
 
   return snippetData
 }
