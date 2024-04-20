@@ -41,6 +41,8 @@ async function insertSnippet() {
       ])
       .select()
 
+  await navigateTo('/snippets/' + data[0].key)
+
   if (error) {
     console.error('Error inserting snippet:', error.message)
   } else {
@@ -49,3 +51,9 @@ async function insertSnippet() {
   }
 }
 </script>
+
+<style scoped>
+.textarea-ghost:focus, .textarea-ghost {
+ @apply !text-base;
+}
+</style>
