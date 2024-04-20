@@ -1,7 +1,7 @@
 <template>
   <div class="navbar bg-base-100">
     <div class="flex-1">
-      <a class="btn btn-ghost text-xl">Snippet Generator</a>
+      <NuxtLink to="/" class="btn btn-ghost text-xl">Snippet Generator</NuxtLink>
     </div>
     <div class="flex-none flex justify-center items-center">
       <label class="swap swap-rotate mr-3 btn btn-square btn-ghost">
