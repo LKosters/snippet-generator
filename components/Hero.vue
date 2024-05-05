@@ -11,7 +11,7 @@
         </label>
         <div class="mockup-code my-8">
           <textarea
-              class="textarea textarea-ghost w-full bg-transparent !outline-none !border-none min-h-96"
+              class="textarea textarea-ghost w-full bg-transparent !outline-none !border-none min-h-96 text-white focus:text-white"
               placeholder="Type your code"
               v-model="snippet.code">
           </textarea>
